@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E7BAB494-F43C-408B-8A11-EC68D33AB049"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E3BF6BF-41B6-4816-A911-EFB4296A8025"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Settings/Model.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "2E3BF6BF-41B6-4816-A911-EFB4296A8025 - beb70a9af483f428"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Settings.Professions.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Settings.Professions&gt;"
+                  moduleName = "Settings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aisaulesibatova/Desktop/startiOS/Settings/Settings/Model.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "2E3BF6BF-41B6-4816-A911-EFB4296A8025 - fc571be02a4cd236"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Settings.Professions.rawValue.getter : Swift.String"
+                  moduleName = "Settings"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aisaulesibatova/Desktop/startiOS/Settings/Settings/Model.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
