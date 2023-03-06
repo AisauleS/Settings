@@ -11,6 +11,7 @@
 		E442016529B339590080461C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442016429B339590080461C /* SettingsViewController.swift */; };
 		E442016729B339930080461C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442016629B339930080461C /* Model.swift */; };
 		E442016C29B3C6D10080461C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E442016B29B3C6D00080461C /* Extension.swift */; };
+		E4AA103E29B5C3CC00472F4C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AA103D29B5C3CC00472F4C /* DetailView.swift */; };
 		E4E3EC0429B4B24A003AD720 /* CellWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3EC0329B4B24A003AD720 /* CellWithSwitch.swift */; };
 		E4E3EC0629B50BBE003AD720 /* CellWithSwitchAndStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3EC0529B50BBE003AD720 /* CellWithSwitchAndStatus.swift */; };
 		E4F7B90929B329C1008C9C41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7B90829B329C1008C9C41 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 		E442016429B339590080461C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E442016629B339930080461C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E442016B29B3C6D00080461C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E4AA103D29B5C3CC00472F4C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E4E3EC0329B4B24A003AD720 /* CellWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithSwitch.swift; sourceTree = "<group>"; };
 		E4E3EC0529B50BBE003AD720 /* CellWithSwitchAndStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellWithSwitchAndStatus.swift; sourceTree = "<group>"; };
 		E4F7B90529B329C1008C9C41 /* Settings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Settings.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				E4E3EC0529B50BBE003AD720 /* CellWithSwitchAndStatus.swift */,
 				E442016629B339930080461C /* Model.swift */,
 				E442016B29B3C6D00080461C /* Extension.swift */,
+				E4AA103D29B5C3CC00472F4C /* DetailView.swift */,
 				E4F7B91129B329C3008C9C41 /* Assets.xcassets */,
 				E4F7B91329B329C3008C9C41 /* LaunchScreen.storyboard */,
 				E4F7B91629B329C3008C9C41 /* Info.plist */,
@@ -160,6 +163,7 @@
 				E442016329B337E90080461C /* RegularCell.swift in Sources */,
 				E442016C29B3C6D10080461C /* Extension.swift in Sources */,
 				E442016529B339590080461C /* SettingsViewController.swift in Sources */,
+				E4AA103E29B5C3CC00472F4C /* DetailView.swift in Sources */,
 				E442016729B339930080461C /* Model.swift in Sources */,
 				E4F7B90929B329C1008C9C41 /* AppDelegate.swift in Sources */,
 				E4E3EC0629B50BBE003AD720 /* CellWithSwitchAndStatus.swift in Sources */,

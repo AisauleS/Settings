@@ -14,12 +14,6 @@ class StatusTableViewCell: UITableViewCell {
     
     private let iconContainer : UIView = {
         let view = UIView()
-        
-//        let view = UIView(frame: CGRect(x: 16, y: 5, width: 65, height: 40))
-//        view.layer.frame = .infinite
-        
-
-
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         view.layer.masksToBounds = true
@@ -28,10 +22,10 @@ class StatusTableViewCell: UITableViewCell {
     
     private let iconImageView : UIImageView = {
         let imageView = UIImageView()
-//        let imageView = UIImageView(frame: CGRect(x: 32, y: 10, width: 20, height: 20))
-
+        //        let imageView = UIImageView(frame: CGRect(x: 32, y: 10, width: 20, height: 20))
+        
         imageView.tintColor = .white
-//        imageView.contentMode = .scaleAspectFit
+        //        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -45,7 +39,6 @@ class StatusTableViewCell: UITableViewCell {
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .right
         label.textColor = .lightGray
-
         return label
     }()
     
@@ -54,7 +47,6 @@ class StatusTableViewCell: UITableViewCell {
         setupHierarchy()
         setupLayout()
         accessoryType = .disclosureIndicator
-        
     }
     
     required init?(coder: NSCoder) {
@@ -70,8 +62,6 @@ class StatusTableViewCell: UITableViewCell {
     }
     
     private func setupLayout() {
-
-        
         iconContainer.snp.makeConstraints {make in
             make.leading.equalToSuperview().offset(16)
             make.height.equalTo(29)
@@ -89,24 +79,14 @@ class StatusTableViewCell: UITableViewCell {
         label.snp.makeConstraints {make in
             make.leading.equalTo(iconContainer.snp.leading).offset(42)
             make.centerY.equalToSuperview()
-
         }
         
         statusLabel.snp.makeConstraints {make in
             make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
-        
-    }
-        
-//
-    
-    
+            
         }
-        
-       
-
-     
-    
+    }
     
     public func configure(with model : StatusSettings) {
         label.text = model.title

@@ -56,18 +56,23 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
     }
-    //
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        tableView.deselectRow(at: indexPath, animated: true)
-    //        let type = models[indexPath.section].options[indexPath.row]
-    //        switch type.self {
-    //        case .staticCell(let model):
-    ////            model.handler()
-    //        case .switchCell(let model):
-    ////            model.handler()
-    //        }
-    //    }
-    //
+    
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            let type = models[indexPath.section].options[indexPath.row]
+            let viewController = DetailViewController()
+
+            switch type.self {
+            case .regularCell(_):
+                navigationController?.pushViewController(viewController, animated: true)
+            case .switchCell(_):
+                print("nothing happens")
+            case .statusCell(model: _):
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+            }
+        
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50
