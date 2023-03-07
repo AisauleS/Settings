@@ -8,7 +8,6 @@
 import UIKit
 
 struct Settings {
-//    let title : String
     let options : [SettingsCellType]
 }
 
@@ -22,14 +21,12 @@ struct SwitchSettings {
     let title : String
     let icon : UIImage?
     let iconBackgroundColor : UIColor
-//    let handler :
 }
 
 struct RegularSettings {
     let title : String
     let icon : UIImage?
     let iconBackgroundColor : UIColor
-//    let handler : (() -> Void)
 }
 
 struct StatusSettings {
@@ -37,8 +34,4 @@ struct StatusSettings {
     let icon : UIImage?
     let iconBackgroundColor : UIColor
     let statusTitle : String
-//    let handler :
 }
-
-
-

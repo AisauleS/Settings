@@ -6,25 +6,48 @@
 //
 
 import UIKit
+import SnapKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
-
-        // Do any additional setup after loading the view.
+    
+    public var model: SettingsCellType?
+    
+    public func fillSettings(with title: String){
+        
+        switch model {
+        case .regularCell:
+            label.text = "\(title) settings configuration"
+        case .switchCell:
+            print("")
+        case .statusCell:
+            label.text = "\(title) settings configuration"
+        case .none:
+            print("")
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private let label: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 26, weight: .light)
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .lightGray
+        view.addSubview(label)
+        setupLayout()
     }
-    */
-
+    
+    func setupLayout() {
+        
+        label.snp.makeConstraints{make in
+            make.center.equalToSuperview()
+            make.trailing.leading.equalToSuperview().inset(60)
+            
+        }
+    }
 }

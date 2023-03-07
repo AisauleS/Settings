@@ -9,11 +9,6 @@ import UIKit
 
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     
-    //func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    //        let section = models[section]
-    //        return section.title
-    //    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return models.count
     }
@@ -43,6 +38,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
                 return UITableViewCell()
             }
             cell.configure(with: model)
+            
             return cell
         case .statusCell(let model):
             guard let cell = tableView.dequeueReusableCell(
@@ -53,30 +49,28 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             }
             cell.configure(with: model)
             return cell
-            
         }
     }
     
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-            let type = models[indexPath.section].options[indexPath.row]
-            let viewController = DetailViewController()
-
-            switch type.self {
-            case .regularCell(_):
-                navigationController?.pushViewController(viewController, animated: true)
-            case .switchCell(_):
-                print("nothing happens")
-            case .statusCell(model: _):
-                navigationController?.pushViewController(viewController, animated: true)
-            }
-            }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = DetailViewController()
+        tableView.deselectRow(at: indexPath, animated: true)
+        let type = models[indexPath.section].options[indexPath.row]
+        viewController.model = models[indexPath.section].options[indexPath.row]
         
-    
+        switch type {
+        case .regularCell(let model):
+            navigationController?.pushViewController(viewController, animated: true)
+            viewController.fillSettings(with: model.title)
+        case .switchCell(_):
+            print("nothing happens")
+        case .statusCell(let model):
+            navigationController?.pushViewController(viewController, animated: true)
+            viewController.fillSettings(with: model.title)
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         50
     }
 }
-
-

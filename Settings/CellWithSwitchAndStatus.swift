@@ -9,32 +9,27 @@ import UIKit
 import SnapKit
 
 class StatusTableViewCell: UITableViewCell {
+    
     static let identifier = "StatusTableViewCell"
     
-    
-    private let iconContainer : UIView = {
+    private let iconContainer: UIView = {
         let view = UIView()
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 8
-        view.layer.masksToBounds = true
+        view.layer.cornerRadius = 6
         return view
     }()
     
-    private let iconImageView : UIImageView = {
+    private let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        //        let imageView = UIImageView(frame: CGRect(x: 32, y: 10, width: 20, height: 20))
-        
         imageView.tintColor = .white
-        //        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    private let label : UILabel = {
+    private let label: UILabel = {
         let label = UILabel()
         return label
     }()
     
-    private let statusLabel : UILabel = {
+    private let statusLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .right
@@ -51,6 +46,13 @@ class StatusTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    public func configure(with model : StatusSettings) {
+        label.text = model.title
+        iconImageView.image = model.icon
+        iconContainer.backgroundColor = model.iconBackgroundColor
+        statusLabel.text = model.statusTitle
     }
     
     private func setupHierarchy() {
@@ -84,20 +86,6 @@ class StatusTableViewCell: UITableViewCell {
         statusLabel.snp.makeConstraints {make in
             make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
-            
         }
     }
-    
-    public func configure(with model : StatusSettings) {
-        label.text = model.title
-        iconImageView.image = model.icon
-        iconContainer.backgroundColor = model.iconBackgroundColor
-        statusLabel.text = model.statusTitle
-    }
-    
-    
 }
-
-
-
-
