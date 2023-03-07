@@ -9,34 +9,27 @@ import UIKit
 import SnapKit
 
 class SwitchTableViewCell: UITableViewCell {
+    
     static let identifier = "SwitchTableViewCell"
-
-
     
     private let iconContainer : UIView = {
-//        let view = UIView()
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 65, height: 40))
-
-//        view.clipsToBounds = true
-        view.layer.cornerRadius = 8
+        let view = UIView()
+        view.layer.cornerRadius = 6
         return view
     }()
     
-    private let iconImageView : UIImageView = {
+    private let iconImageView: UIImageView = {
         let imageView = UIImageView()
-//        let imageView = UIImageView(frame: CGRect(x: 32, y: 10, width: 20, height: 20))
-        
         imageView.tintColor = .white
-        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    private let label : UILabel = {
+    private let label: UILabel = {
         let label = UILabel()
         return label
     }()
     
-    private let mySwitch : UISwitch = {
+    private let mySwitch: UISwitch = {
         let mySwitch = UISwitch()
         mySwitch.onTintColor = .systemBlue
         return mySwitch
@@ -53,6 +46,11 @@ class SwitchTableViewCell: UITableViewCell {
         fatalError()
     }
     
+    public func configure(with model: SwitchSettings) {
+        label.text = model.title
+        iconImageView.image = model.icon
+        iconContainer.backgroundColor = model.iconBackgroundColor
+    }
     
     private func setupHierarchy() {
         contentView.addSubview(iconContainer)
@@ -60,17 +58,14 @@ class SwitchTableViewCell: UITableViewCell {
         contentView.addSubview(label)
         contentView.addSubview(mySwitch)
         contentView.clipsToBounds = true
-        
     }
     
     private func setupLayout() {
-
         
         iconContainer.snp.makeConstraints {make in
             make.leading.equalToSuperview().offset(16)
             make.height.equalTo(29)
             make.width.equalTo(30)
-//            make.center.equalToSuperview()
             make.centerY.equalToSuperview()
         }
         
@@ -79,7 +74,6 @@ class SwitchTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview().offset(-3)
             make.leading.equalToSuperview().offset(3)
             make.trailing.equalToSuperview().offset(-3)
-//            make.top.bottom.leading.trailing.equalToSuperview().offset(3)
         }
         
         label.snp.makeConstraints {make in
@@ -90,22 +84,7 @@ class SwitchTableViewCell: UITableViewCell {
         mySwitch.snp.makeConstraints {make in
             make.trailing.equalToSuperview().offset(-16)
             make.centerY.equalToSuperview()
-
+            
         }
-        
-        
-        
     }
-    
-    
-    public func configure(with model : SwitchSettings) {
-        label.text = model.title
-        iconImageView.image = model.icon
-        iconContainer.backgroundColor = model.iconBackgroundColor
-        //                mySwitch.isOn = model.isOn
-    }
-    
 }
-
-
-
